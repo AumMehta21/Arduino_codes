@@ -1,0 +1,8 @@
+CREATE TABLE password_logs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    account_label VARCHAR(100),
+    password_value VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    UNIQUE(user_id, account_label)
+);
